@@ -9,6 +9,8 @@ typedef MapCreateCallback = void Function(KakaoMapController controller);
 
 typedef OnMapTap = void Function(LatLng latLng);
 
+typedef OnMapDoubleTap = void Function(LatLng latLng);
+
 //typedef void OnMapLongTap(LatLng latLng);
 //
 //typedef void OnMapDoubleTap(LatLng latLng);

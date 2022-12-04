@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_kakao_map_sample/src/home.dart';
 
-InAppLocalhostServer server = InAppLocalhostServer(port: 8080);
+// InAppLocalhostServer server = InAppLocalhostServer(port: 8080);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await server.start();
+  // await server.start();
 
   runApp(const MyApp());
 }

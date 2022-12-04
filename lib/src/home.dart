@@ -36,7 +36,12 @@ class _HomeState extends State<Home> {
               _kakaoMapController = controller;
             },
             onMapTap: (LatLng latLng) {
+              print("map tap >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+              print("${jsonEncode(latLng)}");
               print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+            },
+            onMapDoubleTap: (LatLng latLng) {
+              print("double tap >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
               print("${jsonEncode(latLng)}");
               print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
             },
@@ -51,6 +56,7 @@ class _HomeState extends State<Home> {
               print("zoomLevel : $zoomLevel");
               print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
             },
+            isShowZoomControl: false,
             polylines: polylines,
             circles: circles,
             polygons: polygons,
@@ -146,6 +152,7 @@ class _HomeState extends State<Home> {
                       });
                     },
                   ),
+
                 ],
               ),
             ),
