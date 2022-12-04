@@ -19,7 +19,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  KakaoMapController? _kakaoMapController;
+  late KakaoMapController _kakaoMapController;
 
   Set<Polyline> polylines = {};
   Set<Circle> circles = {};
@@ -39,6 +39,8 @@ class _HomeState extends State<Home> {
               print("map tap >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
               print("${jsonEncode(latLng)}");
               print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+              _kakaoMapController.panTo(latLng);
             },
             onMapDoubleTap: (LatLng latLng) {
               print("double tap >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");

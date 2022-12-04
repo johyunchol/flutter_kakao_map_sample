@@ -77,6 +77,15 @@ class KakaoMapController {
     _webViewController.runJavascript('clearMarker();');
   }
 
+  setCenter(LatLng latLng) {
+    _webViewController.runJavascript("setCenter('${latLng.latitude}', '${latLng.longitude}');");
+  }
+
+  panTo(LatLng latLng) {
+    _webViewController.runJavascript("panTo('${latLng.latitude}', '${latLng.longitude}');");
+  }
+
+
   fitBounds(List<LatLng> points) async {
     await _webViewController.runJavascript("fitBounds('${jsonEncode(points)}');");
   }
